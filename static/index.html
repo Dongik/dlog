@@ -1,15 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 	<head>
 		<title>three.js webgl - gpgpu - flocking</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 		<style>
+            @font-face {
+                font-family: 'D2Coding';
+                src: url(fonts/D2Coding.ttf) format('truetype');
+            }
 			body {
 				background-color: #ffffff;
 				margin: 0px;
 				overflow: hidden;
-				font-family:Monospace;
+				font-family:D2Coding;
 				font-size:13px;
 				text-align:center;
 				text-align:center;
@@ -473,8 +477,8 @@
 
 				initComputeRenderer();
 
-				stats = new Stats();
-				container.appendChild( stats.dom );
+				//stats = new Stats();
+				//container.appendChild( stats.dom );
 
 				document.addEventListener( 'mousemove', onDocumentMouseMove, false );
 				document.addEventListener( 'touchstart', onDocumentTouchStart, false );

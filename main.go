@@ -18,5 +18,8 @@ func main() {
     r := mux.NewRouter()
     //r.HandleFunc("/",indexHandler);
     r.PathPrefix("/").Handler(http.FileServer(http.Dir("./static/")))
-    http.ListenAndServe(":8080",r);
+    err := http.ListenAndServe(":80",r)
+    if err != nil {
+    fmt.Println(err.Error())
+    }
 }
